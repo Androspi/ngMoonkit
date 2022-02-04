@@ -5,7 +5,7 @@ import { Autocomplete, AutocompleteOptions, ListItemSelectedEvent } from 'moonki
 import { MnkService } from './mnk.service';
 
 @Directive({ selector: '[libAutocomplete]' })
-export class AutocompleteDirective implements OnChanges, OnInit, OnDestroy {
+export class AutocompleteDirective implements OnInit, OnChanges, OnDestroy {
 
   @Output() itemChanges: EventEmitter<ListItemSelectedEvent> = new EventEmitter();
   @Input() appAutocomplete: Partial<Omit<AutocompleteOptions, 'data' | 'excludedElements'>>;
